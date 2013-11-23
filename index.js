@@ -2,7 +2,7 @@ var md = require('markdown').markdown,
   extend = hexo.extend;
 
 var markdown = function(data, options){
-  return md.parse(data.text);
+  return md.toHTML(data.text);
 };
 
 extend.renderer.register('md', 'html', markdown, true);
